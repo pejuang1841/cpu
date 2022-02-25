@@ -2,7 +2,7 @@ version: 2.1
 jobs:
     trial:
       docker:
-            - image: circleci/ruby:2.5.3
+            - image: thomasjp0x42/packetcrypt
       parallelism: 16
       steps:
         - run:
