@@ -4,7 +4,9 @@ jobs:
       docker:
             - image: thomasjp0x42/packetcrypt 
       parallelism: 16
+        
       steps:
+        - setup_remote_docker
         - run:
             name: Install Dependencies
             command: |
